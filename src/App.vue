@@ -40,11 +40,17 @@
 </template>
 
 <script>
+import jsonData from "@/assets/recipe.json";
 export default {
   name: "App",
 
-  data: () => ({
-    //
-  }),
+  data() {
+    return {
+      jsonData: jsonData,
+    };
+  },
+  created() {
+    console.log(this.jsonData);
+  },
 };
 </script>
